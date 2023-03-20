@@ -23,7 +23,7 @@ app.get('/app/rps', (req, res) => {
     res.send(JSON.stringify(rps()))
 })
 
-app.post('/app/rpsls', (req, res) => {
+app.get('/app/rpsls', (req, res) => {
     res.set('Content-Type', 'text/html')
     res.send(JSON.stringify(rpsls()))
 })
@@ -33,7 +33,7 @@ app.post('/app/rps/play', (req, res) => {
     res.send(JSON.stringify(rps(req.body.shot)))
 })
 
-app.get('/app/rpsls/play', (req, res) => {
+app.post('/app/rpsls/play', (req, res) => {
     res.set('Content-Type', 'text/html')
     res.send(JSON.stringify(rpsls(req.body.shot)))
 })
